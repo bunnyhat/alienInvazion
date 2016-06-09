@@ -42,11 +42,7 @@
 		"**/*.cubemap":true,
 		"**/*.flare":true,
 		"**/*.mat":true,
-		"**/cs.meta":true,
 		"**/*.meta":true,
-		"**/*.sln":true,
-		"**/*.md":true,
-		"**/*.csproj":true,
 		"**/*.prefab":true,
 		"**/*.unity":true,
 		"build/":true,
@@ -55,8 +51,7 @@
 		"library/":true,
 		"obj/":true,
 		"Obj/":true,
-		"ProjectSettings/":true,
-		"temp/":true,
+		"ProjectSettings/":true,		"temp/":true,
 		"Temp/":true
 	}
 }
