@@ -4,6 +4,7 @@ using System.Collections;
 
 public class SceneManagerScript : MonoBehaviour {
 	
+	public GameObject mainMenuContainer, settingsContainer, creditsContainer;
 	public bool onMainMenu;
 	
 	WaveSpawnScript waveSpawn;		
@@ -26,15 +27,29 @@ public class SceneManagerScript : MonoBehaviour {
 		SceneManager.LoadScene("gameScene");
 		onMainMenu = false;
 	}
+
+	public void Options() {
+		mainMenuContainer.SetActive(false);
+		settingsContainer.SetActive(true);
+	}
+
+	public void BackToMMenuButton() {
+		settingsContainer.SetActive(false);	
+		mainMenuContainer.SetActive(true);
+	}
+
+	public void CreditsButton() {
+		settingsContainer.SetActive(false);
+		creditsContainer.SetActive(true);
+	}
+
+	public void BackToOptionsButton() {
+		creditsContainer.SetActive(false);
+		settingsContainer.SetActive(true);
+	}
 	
 	public void QuitGame() {
 		Application.Quit();
 	}
-	
-	// public void CanvasToggle() {
-		
-	// 	if(onMainMenu == false) {
-	// 		waveSpawn.GetComponent<WaveSpawnScript>().enabled = true;
-	// 	}
-	// }
+
 }
