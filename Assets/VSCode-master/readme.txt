@@ -1,1 +1,0 @@
-copy VSCode folder inside Assets folder of the project!!
