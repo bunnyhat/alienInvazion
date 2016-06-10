@@ -5,14 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class PauseManagerScript : MonoBehaviour {
 	
-	public GameObject playerOne;
-	public GameObject playerTwo;
+	public GameObject playerOne, playerTwo;
+	public Canvas playerOnePauseGUI, playerTwoPauseGUI;
+	public GameObject playerOneHud, playerTwoHud;
+	public GameObject incomingWave;
 	
-	public Canvas playerOnePauseGUI;
-	public Canvas playerTwoPauseGUI;
-	
-	private bool isPlayerOnePaused;
-	private bool isPlayerTwoPaused;
+	private bool isPlayerOnePaused, isPlayerTwoPaused;
 	
 	GameOverManagerScript m_gameOverScript;
 
@@ -37,7 +35,10 @@ public class PauseManagerScript : MonoBehaviour {
 			
 			isPlayerOnePaused = true;
 			playerOnePauseGUI.enabled = true;
-			
+			playerOneHud.SetActive(false);
+			if(incomingWave.activeInHierarchy) {
+				incomingWave.SetActive(false);
+			}
 		}
 		
 		if(Input.GetKey(KeyCode.O) || isPlayerTwoPaused) {
@@ -45,6 +46,10 @@ public class PauseManagerScript : MonoBehaviour {
 			
 			isPlayerTwoPaused = true;
 			playerTwoPauseGUI.enabled = true;
+			playerTwoHud.SetActive(false);
+			if(incomingWave.activeInHierarchy) {
+				incomingWave.SetActive(false);
+			}
 		}
 		
 	}
@@ -64,7 +69,10 @@ public class PauseManagerScript : MonoBehaviour {
 		isPlayerTwoPaused = false;
 		
 		playerOnePauseGUI.enabled = false;
-		playerTwoPauseGUI.enabled = false;		
+		playerTwoPauseGUI.enabled = false;	
+
+		playerOneHud.SetActive(true);
+		playerTwoHud.SetActive(true);
 	}
 	
 	public void MainMenu() {
