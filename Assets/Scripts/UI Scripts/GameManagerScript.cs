@@ -19,4 +19,17 @@ public class GameManagerScript : MonoBehaviour {
 		
 		DontDestroyOnLoad(this);
 	}
+
+	void Update() {
+		GetVolumeSetting();
+	}
+
+	public void GetVolumeSetting() {
+
+		if(PlayerPrefs.GetInt("toggleON") == 1) {
+			
+		}
+		PlayerPrefs.GetInt("toggleON");
+		PlayerPrefs.GetFloat("volumeLevel");
+	}
 }
