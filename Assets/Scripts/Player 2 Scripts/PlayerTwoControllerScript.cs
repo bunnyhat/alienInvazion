@@ -66,7 +66,7 @@ public class PlayerTwoControllerScript : MonoBehaviour {
 	public void HandleMoveRight() {
 		movingRight = !movingRight;
 	}
-	
+
 	public void MoveLeft() {
 		transform.position = new Vector3(transform.position.x - craftSpeed * Time.deltaTime, transform.position.y, transform.position.z);
 	}
