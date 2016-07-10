@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d2458b381e07b914e8063f80530c6245
-timeCreated: 1468098508
+timeCreated: 1453798270
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -57,10 +57,10 @@ TextureImporter:
     - name: Ligher_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 6
         y: 2
-        width: 26
-        height: 25
+        width: 20
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -68,10 +68,10 @@ TextureImporter:
     - name: Ligher_1
       rect:
         serializedVersion: 2
-        x: 35
+        x: 38
         y: 1
-        width: 26
-        height: 26
+        width: 20
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -79,10 +79,10 @@ TextureImporter:
     - name: Ligher_2
       rect:
         serializedVersion: 2
-        x: 67
+        x: 70
         y: 0
-        width: 26
-        height: 27
+        width: 20
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -90,10 +90,10 @@ TextureImporter:
     - name: Ligher_3
       rect:
         serializedVersion: 2
-        x: 99
+        x: 102
         y: 1
-        width: 26
-        height: 26
+        width: 20
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

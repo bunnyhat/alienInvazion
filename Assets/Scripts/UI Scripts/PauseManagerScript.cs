@@ -36,7 +36,6 @@ public class PauseManagerScript : MonoBehaviour {
 			isPlayerOnePaused = true;
 			playerOnePauseGUI.enabled = true;
 			playerOneHud.SetActive(false);
-			playerTwoHud.SetActive(false);
 			if(incomingWave.activeInHierarchy) {
 				incomingWave.SetActive(false);
 			}
@@ -48,7 +47,6 @@ public class PauseManagerScript : MonoBehaviour {
 			isPlayerTwoPaused = true;
 			playerTwoPauseGUI.enabled = true;
 			playerTwoHud.SetActive(false);
-			playerOneHud.SetActive(false);
 			if(incomingWave.activeInHierarchy) {
 				incomingWave.SetActive(false);
 			}
