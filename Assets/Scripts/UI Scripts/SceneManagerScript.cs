@@ -10,7 +10,7 @@ public class SceneManagerScript : MonoBehaviour {
 	WaveSpawnScript waveSpawn;		
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		DontDestroyOnLoad(this);
 		
 		onMainMenu = true;
