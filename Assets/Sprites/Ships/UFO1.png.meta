@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 6cf61c73bc1ff0b4db722cf28eba9864
-timeCreated: 1468098527
+guid: 8ba14e82f48a0cd44b2b5193aa2ab884
+timeCreated: 1468099075
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Ninja_0
-    21300002: Ninja_1
-    21300004: Ninja_2
-    21300006: Ninja_3
+    21300000: UFO1_0
+    21300002: UFO1_1
+    21300004: UFO1_2
+    21300006: UFO1_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -54,46 +54,46 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Ninja_0
+    - name: UFO1_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 30
-        height: 30
+        x: 0
+        y: 0
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Ninja_1
+    - name: UFO1_1
       rect:
         serializedVersion: 2
-        x: 33
-        y: 1
-        width: 30
-        height: 30
+        x: 32
+        y: 0
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Ninja_2
+    - name: UFO1_2
       rect:
         serializedVersion: 2
-        x: 65
-        y: 1
-        width: 30
-        height: 30
+        x: 64
+        y: 0
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Ninja_3
+    - name: UFO1_3
       rect:
         serializedVersion: 2
-        x: 97
-        y: 1
-        width: 30
-        height: 30
+        x: 96
+        y: 0
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

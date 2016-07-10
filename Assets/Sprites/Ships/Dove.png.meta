@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 661b282333ae4b747a57955c48dc4609
-timeCreated: 1453798256
+timeCreated: 1468098485
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -57,10 +57,10 @@ TextureImporter:
     - name: Dove_0
       rect:
         serializedVersion: 2
-        x: 6
+        x: 3
         y: 2
-        width: 20
-        height: 24
+        width: 26
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -68,10 +68,10 @@ TextureImporter:
     - name: Dove_1
       rect:
         serializedVersion: 2
-        x: 38
+        x: 35
         y: 1
-        width: 20
-        height: 25
+        width: 26
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -79,10 +79,10 @@ TextureImporter:
     - name: Dove_2
       rect:
         serializedVersion: 2
-        x: 70
+        x: 67
         y: 0
-        width: 20
-        height: 26
+        width: 26
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -90,10 +90,10 @@ TextureImporter:
     - name: Dove_3
       rect:
         serializedVersion: 2
-        x: 102
+        x: 99
         y: 1
-        width: 20
-        height: 25
+        width: 26
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
