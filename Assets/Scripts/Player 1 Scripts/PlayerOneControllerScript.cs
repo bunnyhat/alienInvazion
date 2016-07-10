@@ -12,6 +12,7 @@ public class PlayerOneControllerScript : MonoBehaviour {
 	public float beamSpeed;
 	public float score;
 	public float lives;
+	public bool isPlayerOneDead;
 	
 	public AudioSource source;
 	public AudioClip laserBeam;
@@ -42,6 +43,8 @@ public class PlayerOneControllerScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+		isPlayerOneDead = false;
 		
 		if(Input.GetKey(KeyCode.A) || movingLeft) {
 			transform.position = new Vector3(transform.position.x - craftSpeed * Time.deltaTime, transform.position.y, transform.position.z);

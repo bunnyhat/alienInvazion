@@ -19,8 +19,6 @@ public class PlatformDefinesScript : MonoBehaviour {
 			//Hide mobile controls
 			playerOneMobileKeys.SetActive(false);
 			playerTwoMobileKeys.SetActive(false);
-
-
 		#elif UNITY_ANDROID || UNITY_IPHONE
 			//Show mobile controls
 			playerOneMobileKeys.SetActive(true);
@@ -31,8 +29,7 @@ public class PlatformDefinesScript : MonoBehaviour {
 			//Hide pc controls
 			playerOnePcKeys.SetActive(false);
 			playerTwoPcKeys.SetActive(false);
-		#endif
-	
+		#endif	
 	}
 	
 }
