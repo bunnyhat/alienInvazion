@@ -11,7 +11,7 @@ public class SceneManagerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		DontDestroyOnLoad(this);
+		//DontDestroyOnLoad(this);
 		
 		onMainMenu = true;
 		

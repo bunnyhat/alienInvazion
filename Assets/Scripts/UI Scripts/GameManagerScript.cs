@@ -4,11 +4,6 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class GameManagerScript : MonoBehaviour {
-	
- private static GameManagerScript _instance;
-
-
-    public static GameManagerScript Instance { get { return _instance; } }
 
 	// <summary>
 	[Header("Game Over screen variables")]
@@ -59,16 +54,19 @@ public class GameManagerScript : MonoBehaviour {
 	PlayerOneControllerScript m_playerOneController;
 	PlayerTwoControllerScript m_playerTwoController;
 
-
-    private void Awake() {
-        if (_instance != null && _instance != this) {
-            Destroy(this.gameObject);
-        } else {
-            _instance = this;
-        }
-    }
+	// private static GameManagerScript _instance;
+    // public static GameManagerScript Instance { get { return _instance; } }
+    // private void Awake() {
+    //     if (_instance != null) {
+    //         Destroy(this.gameObject);
+    //     } else {
+    //         _instance = this;
+    //     }
+    // }
 
 	void Start() {
+		Time.timeScale = 1;
+
 		m_waveSpawnScript = GetComponent<WaveSpawnScript>();
 		m_playerOneController = GameObject.FindGameObjectWithTag("Player1").GetComponent<PlayerOneControllerScript>();	
 		m_playerTwoController = GameObject.FindGameObjectWithTag("Player2").GetComponent<PlayerTwoControllerScript>();
@@ -207,10 +205,9 @@ public class GameManagerScript : MonoBehaviour {
 	public void GetVolumeSetting() {
 
 		if(PlayerPrefs.GetInt("toggleON") == 1) {
-			
+			PlayerPrefs.GetInt("toggleON");
+			PlayerPrefs.GetFloat("volumeLevel");
 		}
-		PlayerPrefs.GetInt("toggleON");
-		PlayerPrefs.GetFloat("volumeLevel");
 	}
 
 		public void PlayerOnePaused() {
