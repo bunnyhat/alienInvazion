@@ -16,7 +16,7 @@ public class GameManagerScript : MonoBehaviour {
 	//Game Objects that need to be disabled when game over canvas is called.
 	public GameObject waveCanvas, mainCanvas;
 	
-	private static bool isGameOver = false;
+	public bool isGameOver = false;
 	// </summary>
 
 	// <summary>
@@ -25,6 +25,7 @@ public class GameManagerScript : MonoBehaviour {
 	public Canvas playerTwoPauseGUI;
 	public GameObject playerOneHud, playerTwoHud;
 	public GameObject incomingWave;
+	public static GameObject m_wave;
 	
 	private bool isPlayerOnePaused, isPlayerTwoPaused;
 	// </summary>
@@ -54,15 +55,6 @@ public class GameManagerScript : MonoBehaviour {
 	PlayerOneControllerScript m_playerOneController;
 	PlayerTwoControllerScript m_playerTwoController;
 
-	// private static GameManagerScript _instance;
-    // public static GameManagerScript Instance { get { return _instance; } }
-    // private void Awake() {
-    //     if (_instance != null) {
-    //         Destroy(this.gameObject);
-    //     } else {
-    //         _instance = this;
-    //     }
-    // }
 
 	void Start() {
 		Time.timeScale = 1;
@@ -70,6 +62,8 @@ public class GameManagerScript : MonoBehaviour {
 		m_waveSpawnScript = GetComponent<WaveSpawnScript>();
 		m_playerOneController = GameObject.FindGameObjectWithTag("Player1").GetComponent<PlayerOneControllerScript>();	
 		m_playerTwoController = GameObject.FindGameObjectWithTag("Player2").GetComponent<PlayerTwoControllerScript>();
+		m_wave = GameObject.FindGameObjectWithTag("Enemy");
+		m_bgController = GetComponent<BGController>();
 
 		gameOverCanvas.SetActive(false);
 		isGameOver = false;
@@ -111,6 +105,7 @@ public class GameManagerScript : MonoBehaviour {
 			playerOnePauseGUI.enabled = true;
 			playerOneHud.SetActive(false);
 			playerTwoHud.SetActive(false);
+			m_wave.SetActive(false);
 			if(incomingWave.activeInHierarchy) {
 				incomingWave.SetActive(false);
 			}
@@ -123,6 +118,7 @@ public class GameManagerScript : MonoBehaviour {
 			playerTwoPauseGUI.enabled = true;
 			playerTwoHud.SetActive(false);
 			playerOneHud.SetActive(false);
+			m_wave.SetActive(false);
 			if(incomingWave.activeInHierarchy) {
 				incomingWave.SetActive(false);
 			}
@@ -149,6 +145,12 @@ public class GameManagerScript : MonoBehaviour {
 				startWave = false;
 				Destroy(currentWave);
 			}
+		}
+
+		if(!playerOne.activeInHierarchy || !playerTwo.activeInHierarchy) {
+			playerOne.SetActive(false);
+			playerTwo.SetActive(false);
+			GameOver();
 		}
 
 		GetVolumeSetting();
@@ -229,5 +231,7 @@ public class GameManagerScript : MonoBehaviour {
 
 		playerOneHud.SetActive(true);
 		playerTwoHud.SetActive(true);
+
+		m_wave.SetActive(true);
 	}
 }
