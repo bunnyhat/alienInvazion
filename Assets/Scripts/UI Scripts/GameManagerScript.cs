@@ -63,7 +63,6 @@ public class GameManagerScript : MonoBehaviour {
 		m_playerOneController = GameObject.FindGameObjectWithTag("Player1").GetComponent<PlayerOneControllerScript>();	
 		m_playerTwoController = GameObject.FindGameObjectWithTag("Player2").GetComponent<PlayerTwoControllerScript>();
 		m_wave = GameObject.FindGameObjectWithTag("Enemy");
-		m_bgController = GetComponent<BGController>();
 
 		gameOverCanvas.SetActive(false);
 		isGameOver = false;
